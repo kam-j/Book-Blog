@@ -1,0 +1,24 @@
+{
+  "name": "book_blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "books_schema.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kam-j/Book-Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kam-j/Book-Blog/issues"
+  },
+  "homepage": "https://github.com/kam-j/Book-Blog#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^2.1.7",
+    "mongoose": "^4.4.6"
+  }
+}
