@@ -18,22 +18,24 @@ router.get('/',function(req,res){
 	});
 });	
 
+// //get specific book
+router.get('/:bookId', function(req,res){
+	console.log('Getting Book with ID: ' +req.params.bookId);
+	Book.findOne({"_id":req.params.bookId}, function(err,books){
+		if(err){
+			console.log(err);
+			res.status(400)
+				.json({err:err})
+		}
+		else{
+			res.json({book:books})
+		}
+	})
+});
+
 module.exports = router;
 
-// //get specific book
-// router.get('/:bookId', function(req,res){
-// 	console.log('Getting Book with ID: ' +req.params.bookId);
-// 	Book.findOne({"_id":req.params.bookId}, function(err,books){
-// 		if(err){
-// 			console.log(err);
-// 			res.status(400)
-// 				.json({err:err})
-// 		}
-// 		else{
-// 			res.json({book:books})
-// 		}
-// 	})
-// });
+
 
 
 // //add a book

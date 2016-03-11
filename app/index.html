@@ -1,1 +1,43 @@
-<h1>Hello, World!</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- App Styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="assets/js/vendor/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+ 
+
+  <title>Book App</title>
+
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload-all.js"></script>
+  <script type="text/javascript" src="bower_components/ng-file-upload-shim/ng-file-upload-shim.js"></script>
+
+
+  <!-- Vendor -->
+  <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="assets/js/_ui.js"></script>
+
+
+  <!-- App Controllers -->
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers/bookCtrl.js"></script>
+  <script type="text/javascript" src="js/controllers/detailsCtrl.js"></script>
+
+  <!-- App Services -->
+  <script type="text/javascript" src="js/services/api.srv.js"></script>
+  <script type="text/javascript" src="js/services/book.srv.js"></script>
+
+
+</head>
+<body ng-app="bookApp">
+
+  <div ui-view class="wrapper"></div>
+
+</body>
+</html>

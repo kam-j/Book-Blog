@@ -1,0 +1,98 @@
+<!-- <table class="table table-hover table-stripend table-bordered">
+	<thead>
+		<tr>
+			<td><h3>Title</h3></td>
+			<td><h3>Image</h3></td>
+			<td><h3>Author</h3></td>
+			<td><h3>Genres</h3></td>
+			<td><h3>Description</h3></td>
+			<td><h3>Pages</h3></td>
+			<td><h3>Publisher</h3></td>
+			<td><h3>Pubdate</h3></td>
+			<td><h3>Review Title</h3></td>
+			<td><h3>Review Rating</h3></td>
+			<td><h3>Review</h3></td>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><h4>{{ ctrl.book.book_title }}</h4></td>
+			<td><h4>{{ ctrl.book.image }}</h4></td>
+			<td><h4>{{ ctrl.book.author }}</h4></td>
+			<td><h4>{{ ctrl.book.genres }}</h4></td>
+			<td><h4>{{ ctrl.book.description }}</h4></td>
+			<td><h4>{{ ctrl.book.pages }}</h4></td>
+			<td><h4>{{ ctrl.book.publisher }}</h4></td>
+			<td><h4>{{ ctrl.book.pubdate }}</h4></td>
+			<td><h4>{{ ctrl.book.reviews_title }}</h4></td>
+			<td><h4>{{ ctrl.book.reviews_rating }}</h4></td>
+			<td><h4>{{ ctrl.book.review }}</h4></td>
+		</tr>
+	</tbody>
+</table> -->
+
+
+
+<h3>{{ctrl.book.book_title}}</h3>
+<div class="media">
+	<!-- <div class="media-left"> -->
+		<a href="#">
+			<img class="media-object" src="{{ctrl.book.image}}" height="300" width="200">
+		</a>
+	</div>
+	<div class="media-body">
+	<div class="media-right">
+		<h4 class="media-heading">Book Info</h4>			
+
+<table class="details-list table">
+	<tr>
+		<th>Author</th>
+		<th>Genres</th>
+		<th>Description</th>
+		<th>Pages</th>
+		<th>Publisher</th>
+		<th>Pubdate</th>
+		<th>&nbsp;</th>
+	</tr>
+	<tr>
+		<td>{{ctrl.book.author}}</td>
+		<td>{{ctrl.book.genres}}</td>
+		<td>{{ctrl.book.description}}</td>
+		<td>{{ctrl.book.pages}}</td>
+		<td>{{ctrl.book.publisher}}</td>
+		<td>{{ctrl.book.pubdate}}</td>
+		<!-- <td><a ng-click="ctrl.deletebook()">Delete</a></td> -->
+	</tr>
+</table>
+
+<div class="media-body">
+		<h2>Review</h2>
+		<h4 class="media-heading">{{ctrl.book.reviews_title}}</h4>
+		<h4 class="media-heading">{{ctrl.book.review}}</h4>
+		<h4 class="media-heading">{{ctrl.book.reviews_rating}}</h4>
+	
+
+<!-- <div id="book-details">
+	<h1 class="text-center">{{ctrl.book.book_title}}</h1>
+	<div class="row">
+		<div class="col-xs-5">
+		<img class="book-cover" ng-src="{{ctrl.book.image}}">
+	</div>
+		<div class="col-xs-7">
+			<table class="table">
+				<tr ng-repeat="(key,val) in ctrl.book">
+				<td><strong>{{key}}</strong>:{{val}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+	  <div class=buttons>
+		<a class="btn btn-primary" ng-click="ctrl.$location.path('/bookList')">Back</a>	
+		</div>
+	</div>			
+
+
+	<div ng-repeat="book in ctrl.books"> -->
+

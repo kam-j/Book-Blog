@@ -14,40 +14,40 @@ var book_route = require('./routes/book_routes.js')
 //set Routes
 app.use('/api/books', book_route);
 
-var newBook = Book(
-	{
-		book_title: "Without Their Permission: How the 21st Century Will Be Made, Not Managed",
-		image: "http://ecx.images-amazon.com/images/I/31bQE-GAJCL.jpg",
-		reviews_title: "Review 1",
-		reviews_rating: 5,
-		review:'Very good book! I loved it lots!',
-		reviews:[
-			{'review':'it was also very good',
-			'user_name':'Johnny'},
-			{'review':'it was also very good2',
-			'user_name':'Johnny2'}
-			],
-		author: "Alexis Ohanian",
-		genres: "Tech",
-		description: "As Alexis Ohanian learned when he helped to co-found the immensely popular reddit.com, the internet is the most powerful and democratic tool for disseminating information in human history. And when that power is harnessed to create new communities, technologies, businesses or charities, the results can be absolutely stunning. In this book, Alexis will share his ideas, tips and even his own doodles about harnessing the power of the web for good, and along the way, he will share his philosophy with young entrepreneurs all over the globe",
-		pages: 263,  
-		publisher: "Hachette",
-		pubdate: 2014
+// var newBook = Book(
+// 	{
+// 		book_title: "Lullabies For Little Criminals: A Novel",
+// 		image: "https://upload.wikimedia.org/wikipedia/en/5/5d/LullabiesForLittleCriminals.jpg",
+// 		reviews_title: "Creepy yet oddly riveting",
+// 		reviews_rating: 4,
+// 		review:'I felt so gross reading this but I couldnt put it down.',
+// 		reviews:[
+// 			{'review':'A troubling coming of age story for a little girl',
+// 			'user_name':'Phyllis'},
+// 			{'review': 'I agree with you. This book was disturbingly good.',
+// 			'user_name':'Stanley'}
+// 			],
+// 		author: "Heather O'Neill",
+// 		genres: "Fiction",
+// 		description: "Baby, all of thirteen years old, is lost in the gangly, coltish moment between childhood and the strange pulls and temptations of the adult world. Her mother is dead; her father, Jules, is scarcely more than a child himself and is always on the lookout for his next score. Baby knows that “chocolate milk” is Jules’ slang for heroin and sees a lot more of that in her house than the real thing. But she takes vivid delight in the scrappy bits of happiness and beauty that find their way to her, and moves through the threat of the streets as if she’s been choreographed in a dance. Soon, though, a hazard emerges that is bigger than even her hard-won survival skills can handle. Alphonse, the local pimp, has his eye on her for his new girl—and what the johns don’t take he covets for himself. If Baby cannot learn to become her own salvation, his dark world threatens to claim her, body and soul.",
+// 		pages: 352,  
+// 		publisher: "Harper Perennial",
+// 		pubdate: 2006,
 				
-	}
+// 	}
 
 
-);
+// );
 
-newBook.save(function(err) {
-    if (err) {
-        console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
-    } else {
-        console.log('Book created!');
-    }
-});
+// newBook.save(function(err) {
+//     if (err) {
+//         console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
+//     } else {
+//         console.log('Book created!');
+//     }
+// });
 
-// Book.findOne({"_id":'56df4b0f7b1cb09e045efd58'}, function(err,book){
+// Book.findOne({"_id":'56e1bf6266055164106cb7b2'}, function(err,book){
 // 		book.remove(function(err){
 // 			if(err){
 // 				// console.log(err);
