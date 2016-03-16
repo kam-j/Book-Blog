@@ -1,0 +1,187 @@
+
+ From review.Srv:
+// ReviewSrv.prototype.getreview = function(bookId) {
+// 	var_this = this;
+// 	return this.api.request('/api/reviews/' + bookId,{},'GET')
+// 	.then(function(res){
+// 		//success promise
+// 		console.log(res);
+// 		return res;
+// 	},function(err){
+// 		//error promise
+// 		console.log(err);
+// 		return; 
+// 	});
+// }
+
+
+From book.Srv:
+// BookSrv.prototype.deletebook = function(bookId){
+// 	var _this = this;
+// 	return this.api.request('/api/books/'+bookId,{},'DEL')
+// 	.then(function(res){
+// 		console.log(res);
+// 		if(res.status==200){
+// 			//book was deleted successfully
+// 			return res;
+// 			//_this.removeshop(bookId);
+// 			//_this.state.go('');
+// 		}
+// 	})
+// }
+
+// BookSrv.prototype.removebook = function(id){
+// 	for(index in this.books){
+// 		if(this.books[index].id == id){
+// 			delete this.books[index];
+
+// 		}
+// 	}
+// }
+
+
+From review_routes:
+	// Review.find({}, function(err,books){
+	// 	if(err) {
+	// 		console.log(err);
+	// 		res.status(400);
+	// 		.json({err:err});
+	// 	}else {
+	// 		res.json({
+	// 			reviews:reviews
+	// 		});
+
+	// 	}
+	// }
+//get specific book
+// router.get('/:reviewId', function(req,res){
+// 	console.log('Getting Review with ID: ' +req.params.reviewId);
+// 	Book.findOne({"book_id":req.params.bookId}, function(err,books){
+// 		if(err){
+// 			console.log(err);
+// 			res.status(400)
+// 				.json({err:err})
+// 		}
+// 		else{
+// 			res.json({review:review})
+// 		}
+// 	})
+// });
+
+
+From bookList.html:
+<!-- <button ng-click="ctrl.goToDetails(book)" class="btn btn-primary">Details</button> -->
+<!-- <a href="#"> -->
+	<img ng-click="ctrl.goToDetails(book)" class="media-object book-image" alt="cover image" ng-src="{{book.image}}" height="280" width="190" class="image-responsive">
+<!-- </a> -->
+
+
+From bookDetails.html(alternate page layout):
+<!-- Enter the book title -->
+<!-- <h3>{{ctrl.book.book_title}}</h3>
+<div class="media-right media-top">
+<!- 	<!-<div class="media-left"> -->
+		<!-- <a href="#">
+			<img class="media-object" src="{{ctrl.book.image}}" height="300" width="200">
+		</a>
+	</div>
+	<div class="media-body">
+	<div class="media-right">
+		<h4 class="media-heading"></h4>			
+
+<table class="details-list table">
+	<tr>
+		<th>Author</th>
+		<th>Genres</th>
+		<th>Description</th>
+		<th>Pages</th>
+		<th>Publisher</th>
+		<th>Pubdate</th>
+		<th>&nbsp;</th>
+	</tr>
+	<tr>
+		<td>{{ctrl.book.author}}</td>
+		<td>{{ctrl.book.genres}}</td>
+		<td>{{ctrl.book.description}}</td>
+		<td>{{ctrl.book.pages}}</td>
+		<td>{{ctrl.book.publisher}}</td>
+		<td>{{ctrl.book.pubdate}}</td> --> 
+		<!-- <td><a ng-click="ctrl.deletebook()">Delete</a></td> -->
+<!-- 	</tr>
+</table>
+
+<div class="media-body">
+		<h2 class="media-heading">Review</h2>
+		<h4 class="media-heading">{{ctrl.book.reviews_title}}</h4>
+		<h4 class="media-heading">{{ctrl.book.review}}</h4>
+		<h4 class="media-heading">{{ctrl.book.reviews_rating}}</h4> -->
+	 
+
+<!-- 
+	  <div class=buttons>
+		<a class="btn btn-primary" ng-click="ctrl.$location.path('/bookList')">Back</a>	
+		</div>
+	</div>	 -->	
+
+
+From detailsCtrl:
+// detailsCtrl.prototype.deletebook = function(){
+// 	var ctrl = this;
+// 	var _id = ctrl.book._id;
+
+// 	ctrl.BookSrv.deletebook(_id).then(function(res){
+// 		ctrl.state.go('/booklist');
+// 	});
+// }
+
+
+From app.css (alternate page layout):
+/*.container-fluid {
+	/*margin: 15px auto;*/
+/*    position: relative;
+    padding-top: 10.59%;
+    padding-bottom: 20.59%;
+    max-width: 400px;
+
+}*/
+/*
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100px;
+    height:100px; 
+}*/
+
+/*.book-list-item {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.book-list-item:hover {
+	background-color: #eee;
+}*/
+
+/*#search {
+	background-color: transparent;
+	position: relative;
+	margin-top: -23px;
+}*/
+
+/*#a:hover{
+	background-color: #eee;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

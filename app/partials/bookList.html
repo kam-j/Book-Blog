@@ -1,60 +1,46 @@
-<section>
-		<div class="container-fluid">
-			<div class="row" >
 
-			<div ng-repeat="book in ctrl.books" class="col-lg-3 col-sm-6 col-xs-12">
-				<img ng-src="{{book.image}}" height="300" width="200" class="image-responsive">
-				<button ng-click="ctrl.goToDetails(book)" class="btn btn-primary">Details</button>
-			</div>
-	  	      <!-- <div ng-repeat="book in ctrl.books" class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://ecx.images-amazon.com/images/I/31bQE-GAJCL.jpg" height="300" width="200" class="image-responsive">
-	  		  </div>
-	
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://thingsalittlebirdtoldme.com/img/book@2x.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://howtonestforless.com/wp-content/uploads/2012/07/outliers-malcolm-gladwell.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="https://upload.wikimedia.org/wikipedia/en/6/69/Perksofbeingwallflower1.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://ecx.images-amazon.com/images/I/51ygEY-x60L._SX258_BO1,204,203,200_.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	  
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://ecx.images-amazon.com/images/I/51Qk3dIqeNL._SY344_BO1,204,203,200_.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	  
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://cdn.gamer-network.net/2014/usgamer/original.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	  
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="https://upload.wikimedia.org/wikipedia/en/0/01/Cover_for_Worst._Person._Ever.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	  
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://ecx.images-amazon.com/images/I/5194Yo0pYDL.jpg" class="image-responsive" height="300" width="200">
-	  		 </div>
-	  
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://d.gr-assets.com/books/1347708559l/6905012.jpg" class="image-responsive" height="300" width="200">
-	  		 </div>
-	  
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="http://ecx.images-amazon.com/images/I/41clh8Uv6hL._SY344_BO1,204,203,200_.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>
-	  
-	  		 <div class="col-lg-3 col-sm-6 col-xs-12">
-	  			<img src="https://upload.wikimedia.org/wikipedia/en/5/5d/LullabiesForLittleCriminals.jpg" height="300" width="200" class="image-responsive">
-	  		 </div>	 -->
+<section>
+		<!-- <div class="page-header">
+		<h1 class="text-center">Bookshelf<small></small></h1> -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 ">
+				<form class="form-group align" role="search">
+					<div class="form-group ">
+						<label for="search">Search</label>
+						<input ng-model="search" type="text" class="form-control" id="search">
+					</div> 
+					<div class="form-group">
+						<label for="search">Sort</label>
+					
+						<select class="form-control" ng-options="option as option.label for option in ctrl.sortOptions" ng-model="ctrl.sortOption"></select>
+					</div>
+				</form>
+		 	</div>
+		</div>
+	</div>
+
+		
+		 <div class="media book-list-item">
+			<!--  <div class="media-left"> -->
+			 	<div class="container-fluid">
+					<div class="row">
+						<div ng-repeat="book in ctrl.books
+							   | filter:search
+							   | orderBy: ctrl.sortOption.sortField:ctrl.sortOption.reverse"
+							
+							class="col-xs-12 col-sm-4 col-md-3">
+							<!-- <a href="#"> -->
+							<img ng-click="ctrl.goToDetails(book)" class="media-object book-image" alt="cover image" ng-src="{{book.image}}" height="280" width="190" class="image-responsive">
+							<!-- </a> -->
+						</div>
+			  		</div>
+		  		</div>
+		  <!-- 	</div> -->
 	  	</div>
 </section>
+
+
 
 
 

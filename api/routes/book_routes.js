@@ -18,7 +18,7 @@ router.get('/',function(req,res){
 	});
 });	
 
-// //get specific book
+//get specific book
 router.get('/:bookId', function(req,res){
 	console.log('Getting Book with ID: ' +req.params.bookId);
 	Book.findOne({"_id":req.params.bookId}, function(err,books){
@@ -32,6 +32,25 @@ router.get('/:bookId', function(req,res){
 		}
 	})
 });
+
+//  //delete a book
+// router.delete('/:bookId',function(req,res){
+// 	console.log('Deleting Book with ID: ' +req.params.bookId);
+// 	Book.findOne({"_id":req.params.bookId}, function(err,books){
+// 		book.remove(function(err){
+// 			if(err){
+// 				console.log(err);
+// 				res.status(400);
+// 					.json({err:err})
+// 			}
+// 			else {
+// 				res.json({deleted:true})
+// 			}
+
+// 		})
+
+// 	});
+// });	
 
 module.exports = router;
 
@@ -84,24 +103,7 @@ module.exports = router;
 // 	})
 // });
 
-// //delete a book
-// router.delete('/:bookId',function(req,res){
-// 	console.log(req.params);
-// 	Book.findOne({"_id":req.params.bookId}, function(err,books){
-// 		book.remove(function(err){
-// 			if(err){
-// 				console.log(err);
-// 				res.status(400);
-// 					.json({err:err})
-// 			}
-// 			else {
-// 				res.json({deleted:true})
-// 			}
-
-// 		})
-
-// 	});
-// });		
+	
 
 		
 

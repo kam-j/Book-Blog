@@ -39,26 +39,4 @@ BookSrv.prototype.getbook = function(bookId) {
 		});
 }
 
-// BookSrv.prototype.deletebook = function(bookId){
-// 	var _this = this;
-// 	return this.api.request('/api/books/'+bookId,{},'DEL')
-// 	.then(function(res){
-// 		console.log(res);
-// 		if(res.status==200){
-// 			//book was deleted successfully
-// 			return res;
-// 			//_this.removeshop(bookId);
-// 			//_this.state.go('');
-// 		}
-// 	})
-// }
-
-// BookSrv.prototype.removebook = function(id){
-// 	for(index in this.books){
-// 		if(this.books[index].id == id){
-// 			delete this.books[index];
-
-// 		}
-// 	}
-// }
 

@@ -10,29 +10,31 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 //route configuration
 var book_route = require('./routes/book_routes.js')
+var review_route = require('./routes/review_routes.js')
 
 //set Routes
 app.use('/api/books', book_route);
+app.use('/api/reviews', review_route);
 
 // var newBook = Book(
 // 	{
-// 		book_title: "Lullabies For Little Criminals: A Novel",
-// 		image: "https://upload.wikimedia.org/wikipedia/en/5/5d/LullabiesForLittleCriminals.jpg",
-// 		reviews_title: "Creepy yet oddly riveting",
+// 		book_title: "Console Wars: Sega, Nintendo, and the Battle that Defined a Generation",
+// 		image: "http://cdn.gamer-network.net/2014/usgamer/original.jpg",
+// 		reviews_title: "Story of my life.",
 // 		reviews_rating: 4,
-// 		review:'I felt so gross reading this but I couldnt put it down.',
+// 		review:"First things first. I am team Sega.",
 // 		reviews:[
-// 			{'review':'A troubling coming of age story for a little girl',
-// 			'user_name':'Phyllis'},
-// 			{'review': 'I agree with you. This book was disturbingly good.',
-// 			'user_name':'Stanley'}
+// 			{'review':"You suck. Team Nintendo, all the way!",
+// 			'user_name':"Roy"},
+// 			{'review': 'Meh, I might just watch the movie, then.',
+// 			'user_name':'Daryl'}
 // 			],
-// 		author: "Heather O'Neill",
-// 		genres: "Fiction",
-// 		description: "Baby, all of thirteen years old, is lost in the gangly, coltish moment between childhood and the strange pulls and temptations of the adult world. Her mother is dead; her father, Jules, is scarcely more than a child himself and is always on the lookout for his next score. Baby knows that “chocolate milk” is Jules’ slang for heroin and sees a lot more of that in her house than the real thing. But she takes vivid delight in the scrappy bits of happiness and beauty that find their way to her, and moves through the threat of the streets as if she’s been choreographed in a dance. Soon, though, a hazard emerges that is bigger than even her hard-won survival skills can handle. Alphonse, the local pimp, has his eye on her for his new girl—and what the johns don’t take he covets for himself. If Baby cannot learn to become her own salvation, his dark world threatens to claim her, body and soul.",
-// 		pages: 352,  
-// 		publisher: "Harper Perennial",
-// 		pubdate: 2006,
+// 		author: "Blake J. Harris",
+// 		genres: "Tech",
+// 		description: "In 1990, Nintendo had a virtual monopoly on the videogame industry. Sega, on the other hand, was just a faltering arcade company with big aspirations and even bigger personalities. But all that would change with the arrival of Tom Kalinske, a former Mattel executive who knew nothing about videogames and everything about fighting uphill battles. His unconventional tactics, combined with the blood, sweat, and bold ideas of his renegade employees, completely transformed Sega and led to a ruthless, David-and-Goliath showdown with Nintendo. Little did he realize that Sega's success would create many new enemies and, most important, make Nintendo stronger than ever.",
+// 		pages: 320,  
+// 		publisher: "Dey Street Books",
+// 		pubdate: 2014,
 				
 // 	}
 
@@ -47,7 +49,7 @@ app.use('/api/books', book_route);
 //     }
 // });
 
-// Book.findOne({"_id":'56e1bf6266055164106cb7b2'}, function(err,book){
+// Book.findOne({"_id":"56e1b46ef4fc9bf40ff069e9"}, function(err,book){
 // 		book.remove(function(err){
 // 			if(err){
 // 				// console.log(err);

@@ -1,98 +1,112 @@
-<!-- <table class="table table-hover table-stripend table-bordered">
-	<thead>
-		<tr>
-			<td><h3>Title</h3></td>
-			<td><h3>Image</h3></td>
-			<td><h3>Author</h3></td>
-			<td><h3>Genres</h3></td>
-			<td><h3>Description</h3></td>
-			<td><h3>Pages</h3></td>
-			<td><h3>Publisher</h3></td>
-			<td><h3>Pubdate</h3></td>
-			<td><h3>Review Title</h3></td>
-			<td><h3>Review Rating</h3></td>
-			<td><h3>Review</h3></td>
-			
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><h4>{{ ctrl.book.book_title }}</h4></td>
-			<td><h4>{{ ctrl.book.image }}</h4></td>
-			<td><h4>{{ ctrl.book.author }}</h4></td>
-			<td><h4>{{ ctrl.book.genres }}</h4></td>
-			<td><h4>{{ ctrl.book.description }}</h4></td>
-			<td><h4>{{ ctrl.book.pages }}</h4></td>
-			<td><h4>{{ ctrl.book.publisher }}</h4></td>
-			<td><h4>{{ ctrl.book.pubdate }}</h4></td>
-			<td><h4>{{ ctrl.book.reviews_title }}</h4></td>
-			<td><h4>{{ ctrl.book.reviews_rating }}</h4></td>
-			<td><h4>{{ ctrl.book.review }}</h4></td>
-		</tr>
-	</tbody>
-</table> -->
 
-
-
-<h3>{{ctrl.book.book_title}}</h3>
-<div class="media">
-	<!-- <div class="media-left"> -->
-		<a href="#">
-			<img class="media-object" src="{{ctrl.book.image}}" height="300" width="200">
-		</a>
+<div class="row">
+	<div class="col-xs-12">
+<!-- <section class="profile clearfix"> -->
+		
+		<div class="avatar-container">
+			<img class="avatar" ng-src="{{ctrl.book.image}}">
+			<div class="avatar-text">
+				<h1>{{ctrl.book.book_title}}</h1>
+				<h2>
+					Rating: {{ctrl.book.reviews_rating}} 
+				</h2>
+			</div>
+		</div>
 	</div>
-	<div class="media-body">
-	<div class="media-right">
-		<h4 class="media-heading">Book Info</h4>			
+</div>
+<div class="row">
+<!-- <article class="resume-left"> -->
+	<div class="col-xs-12 col-sm-4">
+		<!-- <img class="logo" src="assets/brainstation/logos/BrainstationLogo.png"> -->
 
-<table class="details-list table">
-	<tr>
-		<th>Author</th>
-		<th>Genres</th>
-		<th>Description</th>
-		<th>Pages</th>
-		<th>Publisher</th>
-		<th>Pubdate</th>
-		<th>&nbsp;</th>
-	</tr>
-	<tr>
-		<td>{{ctrl.book.author}}</td>
-		<td>{{ctrl.book.genres}}</td>
-		<td>{{ctrl.book.description}}</td>
-		<td>{{ctrl.book.pages}}</td>
-		<td>{{ctrl.book.publisher}}</td>
-		<td>{{ctrl.book.pubdate}}</td>
-		<!-- <td><a ng-click="ctrl.deletebook()">Delete</a></td> -->
-	</tr>
-</table>
+		<h3>
+			Author: {{ctrl.book.author}}
+		</h3>	
 
-<div class="media-body">
-		<h2>Review</h2>
-		<h4 class="media-heading">{{ctrl.book.reviews_title}}</h4>
-		<h4 class="media-heading">{{ctrl.book.review}}</h4>
-		<h4 class="media-heading">{{ctrl.book.reviews_rating}}</h4>
+		<h3>
+			Genre: {{ctrl.book.genres}}
+		</h3>
+
+		<h3>
+			Pages: {{ctrl.book.pages}}
+		</h3>
+
+		<h3>
+			Publisher: {{ctrl.book.publisher}}
+		</h3>
+
+		<h3>
+			Pubdate: {{ctrl.book.pubdate}}
+		</h3>
+
+		<h3>
+			Description: <br>
+			{{ctrl.book.description}}
+		</h3>
+
+		<div class="social-links">
+			<a href="https://facebook.com/" target="_blank">
+		<div class="social"><i class="fa fa-facebook"></i></div>
+			</a>
+			<a href="https://twitter.com/" target="_blank">
+		<div class="social"><i class="fa fa-twitter"></i></div>
+			</a>
+			<a href="https://instagram.com/" target="_blank">
+		<div class="social"><i class="fa fa-instagram"></i></div>
+			</a>
+			<a href="https://linkedin.com/" target="_blank">
+		<div class="social"><i class="fa fa-linkedin"></i></div>
+			</a>
+		</div>
+	</div>
+<!-- </article> -->	
+	<div class="col-xs-12 col-sm-8">
+		<div class="module">
+			<ul class="skills-list">
+				<li>
+					<div class="left"></div>
+					<div class="right">
+						<h3>
+							{{ctrl.book.reviews_title}}
+						</h3>
+					<p>
+						{{ctrl.book.review}}
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<button class="btn btn-primary btn-sm" ui-sref="bookList">Back</button>
+				
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+					<div id="comment-message" class="form-row">
+						<textarea name = "review" placeholder = "Leave a review!" id = "comment" ng-model="ctrl.review"></textarea>
+					</div>
+					<button type="button" class="btn btn-primary btn-sm" ng-click="ctrl.addReview()">Add Review</button>
+						<!-- <input style="width: 5px" type="checkbox" value="1" name="subscribe" id="subscribe" checked="checked">
+							<p1><b>Notify me when new reviews are added.</b></p1> -->
+					<!-- <div class="row">
+						<div class="col-xs-12 col-sm-4"> -->
+							<h3>Reviews:</h3>
+							<div ng-repeat="review in ctrl.reviews">
+								<p>Reader {{$index+1}} : {{review.review}}</p>
+							</div>
+						<!-- </div>
+						</div> -->		
+				
+					</div>
+				</div>
+				</div>
+			</li>	
+		</ul>
+	  </div>	
+	</div>		
+ </div>
+</section>
 	
 
-<!-- <div id="book-details">
-	<h1 class="text-center">{{ctrl.book.book_title}}</h1>
-	<div class="row">
-		<div class="col-xs-5">
-		<img class="book-cover" ng-src="{{ctrl.book.image}}">
-	</div>
-		<div class="col-xs-7">
-			<table class="table">
-				<tr ng-repeat="(key,val) in ctrl.book">
-				<td><strong>{{key}}</strong>:{{val}}</td>
-				</tr>
-			</table>
-		</div>
-	</div>
-	<div class="row">
-	  <div class=buttons>
-		<a class="btn btn-primary" ng-click="ctrl.$location.path('/bookList')">Back</a>	
-		</div>
-	</div>			
 
-
-	<div ng-repeat="book in ctrl.books"> -->
-
+	
