@@ -18,23 +18,23 @@ app.use('/api/reviews', review_route);
 
 var newBook = Book(
 	{
-		book_title: "Console Wars: Sega, Nintendo, and the Battle that Defined a Generation",
-		image: "http://cdn.gamer-network.net/2014/usgamer/original.jpg",
-		reviews_title: "Story of my life.",
+		book_title: "Things A Little Bird Told Me: Confessions of the Creative Mind",
+		image: "http://thingsalittlebirdtoldme.com/img/book@2x.jpg",
+		reviews_title: "Who can drop out of college and still get hired by Google? This guy.",
 		reviews_rating: 4,
-		review:"First things first. I am team Sega.",
+		review:"This book is a surprisingly easy, enlightening and important read for anyone working in a creative industry. Biz offers great advice about creating ideas, manufacturing opportunity and abandoning a linear of thinking. None of his advice is new and it is a bit over simplified, but It makes so much sense when you can compare his experiences to your everyday life.",
 		reviews:[
-			{'review':"You suck. Team Nintendo, all the way!",
-			'user_name':"Roy"},
-			{'review': 'Meh, I might just watch the movie, then.',
-			'user_name':'Daryl'}
+			{'review':"Lucky guy",
+			'user_name':"Jerry"},
+			{'review': 'Not fair. My life is so hard.',
+			'user_name':'Newman'}
 			],
-		author: "Blake J. Harris",
+		author: "Biz Stone",
 		genres: "Tech",
-		description: "In 1990, Nintendo had a virtual monopoly on the videogame industry. Sega, on the other hand, was just a faltering arcade company with big aspirations and even bigger personalities. But all that would change with the arrival of Tom Kalinske, a former Mattel executive who knew nothing about videogames and everything about fighting uphill battles. His unconventional tactics, combined with the blood, sweat, and bold ideas of his renegade employees, completely transformed Sega and led to a ruthless, David-and-Goliath showdown with Nintendo. Little did he realize that Sega's success would create many new enemies and, most important, make Nintendo stronger than ever.",
-		pages: 320,  
-		publisher: "Dey Street Books",
-		pubdate: 2014,
+		description: "In this book, Biz addresses failure, the value of vulnerability, ambition, and corporate culture. Whether seeking behind-the-scenes stories, advice, or wisdom and principles from one of the most successful businessmen of the new century.",
+		pages: 240,  
+		publisher: "Hachette",
+		pubdate: 2015,
 				
 	}
 
