@@ -14,7 +14,7 @@ var review_route = require('./routes/review_routes.js')
 
 //set Routes
 app.use('/api/books', book_route);
-app.use('/api/reviews', review_route);
+app.use('/api/reviews', review_route
 
 // var newBook = Book(
 // 	{
@@ -80,8 +80,8 @@ db.once('open', function() {
 
 
 //start Express on port 8080
-app.listen(8080, function(){
-	console.log('Server Started on http://localhost:8080');
+app.listen(80, function(){
+	console.log('Server Started on http://localhost:80');
 	console.log('Press CTRL + C to stop server');
 });
 
