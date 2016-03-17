@@ -5,10 +5,10 @@ html,body{
 }
 body{
 	color:#40535c;
-	font-family: 'Roboto';
+	font-family: 'Book Antiqua';
 	font-weight: normal;
 	font-style: normal;
-	font-size: 100%;
+	font-size: 80%;
 	line-height: 1.5;
 	position: relative;
 	cursor: auto;
@@ -16,17 +16,20 @@ body{
 	-webkit-font-smoothing: subpixel-antialiased
 }
 .form-group label.search{
-	font-size:26pt; 
+	font-size:30pt; 
 }
 
 h1{
+	font-family: 'Andale Mono';
 	color:330099;
-	font-size:26pt;
+	font-size:20pt;
 	font-weight: normal;
 	margin:0px 0px 20px 0px;
 
 }
 h2{
+	font-family: 'Andale Mono';
+	color: #282828;
 	font-size:16pt;
 	font-weight: normal;
 	margin:0px;
@@ -88,18 +91,21 @@ a:hover{
 }
 
 .avatar-container img.avatar{
-	width:15em;
-	height:15em;
-	border-radius:200%;
+	width:20em;
+	height:20em;
+	border-radius:600%;
+	border-width: 15px;
+	border-color: black;
 	margin-bottom:10px;
 	padding:0px;
 	background:black;
 }
 h3{
     font-size:18px;
-    color:#064DA5;
+    font-family: 'Andale Mono';
+    color:#282828;
     font-weight:500;
-    margin:20px 0px;
+    margin:20px 5px 10px 5px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -134,12 +140,18 @@ h3{
 }
 
 p{
+    font-family: 'DejaVu Sans';
     font-weight:500;
-    font-size:210%;
+    font-size:200%;
     line-height:1.5em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: subpixel-antialiased
    
+}
+h4{
+	font-family: 'DejaVu Sans';
+	font-size: 250%;
+	/*color: #008B45;*/ 
 }
 p.bio{
      padding:10px;
@@ -195,6 +207,8 @@ p.bio{
 }
 
 .skills-list li .right{
+    margin-top: 15px;
+    margin-bottom: 15px;
     width:400px;
     display:inline-block;
     vertical-align:middle;
@@ -237,23 +251,69 @@ background-color: #09466f;
 
 }
 
-/*.align{
+.align{
 	text-align: center;
 	margin: 0 auto;
+
 }
 .form-control{
 	margin: 0 auto;
-	width: 33.33%;*/
-}
-img.media-object.book-image{
-	margin-top: 10px;
-	margin-bottom: 10px; 
-	/*margin-right-left: 15px;
-	margin-left: 15px;*/
+	width: 100%;
 }
 form.form-group.align.ng-pristine.ng-valid{
 	margin: 0 auto;
 	text-align: center;
-	width: 33.33%;
+	width: 100%;
+	/*margin-bottom: 15px;*/
+}
+
+
+img.media-object.book-image{
+	margin-top: 15px;
+	margin-bottom: 15px; 
+	/*margin-right-left: 15px;
+	margin-left: 15px;*/
+}
+
+.button{
+	margin-left: 0px;
+	margin-right: 0px;
+	font-family: 'Andale Mono';
+	font-size: 15px; 
+}
+
+#comment-message{
+	margin-left: -22px;
+	margin-right: 10px;
+}
+
+.comment{
+	width:100%;
+	font-family: 'Andale Mono';
+}
+
+.form-row{
+	font-size: 15px;
+}
+.form-group{
+	font-size: 18px;
+	font-family: 'Andale Mono';
+	color: #282828;
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+footer {
+	text-align: center;
+}
+.btn-default {
+	margin-left: -15px;
+	margin-right: -20px;
+	margin-top: 20px
+	font: 'Andale Mono'
+}
+button {
+	margin-top: 15px;
+	font-family: 'Andale Mono';
+	color: #2c95dc;
 }
 	
