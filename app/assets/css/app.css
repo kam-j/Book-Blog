@@ -21,7 +21,7 @@ body{
 
 h1{
 	font-family: 'Andale Mono';
-	color:330099;
+	color:#165E78;
 	font-size:20pt;
 	font-weight: normal;
 	margin:0px 0px 20px 0px;
@@ -29,7 +29,7 @@ h1{
 }
 h2{
 	font-family: 'Andale Mono';
-	color: #282828;
+	color: #165E78;
 	font-size:16pt;
 	font-weight: normal;
 	margin:0px;
@@ -103,7 +103,7 @@ a:hover{
 h3{
     font-size:18px;
     font-family: 'Andale Mono';
-    color:#282828;
+    color:#165E78;
     font-weight:500;
     margin:20px 5px 10px 5px;
     text-rendering: optimizeLegibility;
@@ -151,6 +151,7 @@ p{
 h4{
 	font-family: 'DejaVu Sans';
 	font-size: 250%;
+	color: #165E78;
 	/*color: #008B45;*/ 
 }
 p.bio{
@@ -298,7 +299,7 @@ img.media-object.book-image{
 .form-group{
 	font-size: 18px;
 	font-family: 'Andale Mono';
-	color: #282828;
+	color: #165E78;
 	text-rendering: optimizeLegibility;
     -webkit-font-smoothing: subpixel-antialiased
 }

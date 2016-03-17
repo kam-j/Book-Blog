@@ -20,27 +20,27 @@
 		<!-- <img class="logo" src="assets/brainstation/logos/BrainstationLogo.png"> -->
 
 		<h3>
-			<b>Author:</b> {{ctrl.book.author}}
+			Author: {{ctrl.book.author}}
 		</h3>	
 
 		<h3>
-			<b>Genre:</b> {{ctrl.book.genres}}
+			Genre: {{ctrl.book.genres}}
 		</h3>
 
 		<h3>
-			<b>Pages:</b> {{ctrl.book.pages}}
+			Pages: {{ctrl.book.pages}}
 		</h3>
 
 		<h3>
-			<b>Publisher:</b> {{ctrl.book.publisher}}
+			Publisher: {{ctrl.book.publisher}}
 		</h3>
 
 		<h3>
-			<b>Pubdate:</b> {{ctrl.book.pubdate}}
+			Pubdate: {{ctrl.book.pubdate}}
 		</h3>
 
 		<h3>
-			<b>Description:</b> <br>
+			Description: <br>
 			{{ctrl.book.description}}
 		</h3>
 
@@ -99,7 +99,7 @@
 							<h3>Reviews:</h3>
 							<div class="comment"
 							<div ng-repeat="review in ctrl.reviews">
-								<p>Anonymous User {{$index+1}} : {{review.review}}</p>
+								<p>Anonymous User: {{$index+1}} : {{review.review}}</p>
 								</div>
 							</div>
 						<!-- </div>

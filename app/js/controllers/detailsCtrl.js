@@ -39,8 +39,8 @@ detailsCtrl.prototype.addReview = function() {
 	}
 
 	ctrl.ReviewSrv.addReview(payload).then(function(res){
-		//ctrl.reviews.unshift(res.data.review);
-		ctrl.reviews.splice(0,0,res.data.review);
+		ctrl.reviews.unshift(res.data.review);
+		// ctrl.reviews.splice(0,0,res.data.review);
 		// ctrl.reviews.splice(0,)
 	});
 		//$(ctrl.reviews).prependTo(res.data.review);
