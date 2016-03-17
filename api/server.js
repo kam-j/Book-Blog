@@ -14,7 +14,7 @@ var review_route = require('./routes/review_routes.js')
 
 //set Routes
 app.use('/api/books', book_route);
-app.use('/api/reviews', review_route
+app.use('/api/reviews', review_route);
 
 // var newBook = Book(
 // 	{
