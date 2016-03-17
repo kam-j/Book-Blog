@@ -16,38 +16,44 @@ var review_route = require('./routes/review_routes.js')
 app.use('/api/books', book_route);
 app.use('/api/reviews', review_route);
 
+
+
+
+//databasse connect
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/data/db/');
+
+// Log to console any errors or a successful connection.
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+	console.log("Connected to db at /data/db/")
+});
+
 var newBook = Book(
 	{
-		book_title: "Things A Little Bird Told Me: Confessions of the Creative Mind",
-		image: "http://thingsalittlebirdtoldme.com/img/book@2x.jpg",
-		reviews_title: "Who can drop out of college and still get hired by Google? This guy.",
+		book_title: "Outliers: The Story of Success",
+		image: "https://images-na.ssl-images-amazon.com/images/I/41h5QL0vVEL.jpg",
+		reviews_title: "Nature vs. Nurture",
 		reviews_rating: 4,
-		review:"This book is a surprisingly easy, enlightening and important read for anyone working in a creative industry. Biz offers great advice about creating ideas, manufacturing opportunity and abandoning a linear of thinking. None of his advice is new and it is a bit over simplified, but It makes so much sense when you can compare his experiences to your everyday life.",
+		review:"An incredibly insightful read. This is the first book I've read by Malcolm. It definitely won't be the last!",
 		reviews:[
-			{'review':"Lucky guy",
-			'user_name':"Jerry"},
-			{'review': 'Not fair. My life is so hard.',
-			'user_name':'Newman'}
+			{'review':"Nothing new. It's all been said before.",
+			'user_name':"George"},
+			{'review': 'These pretzels are making me thirsty.',
+			'user_name':'Kramer'}
 			],
-		author: "Biz Stone",
-		genres: "Tech",
-		description: "In this book, Biz addresses failure, the value of vulnerability, ambition, and corporate culture. Whether seeking behind-the-scenes stories, advice, or wisdom and principles from one of the most successful businessmen of the new century.",
-		pages: 240,  
+		author: "Malcolm Gladwell",
+		genres: "Psychology",
+		description: "There is a story that is usually told about extremely successful people, a story that focuses on intelligence and ambition. Gladwell argues that the true story of success is very different, and that if we want to understand how some people thrive, we should spend more time looking around them-at such things as their family, their birthplace, or even their birth date. And in revealing that hidden logic, Gladwell presents a fascinating and provocative blueprint for making the most of human potential.",
+		pages: 336,  
 		publisher: "Hachette",
-		pubdate: 2015,
+		pubdate: 2008,
 				
 	}
 
 
 );
-
-newBook.save(function(err) {
-    if (err) {
-        console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
-    } else {
-        console.log('Book created!');
-    }
-});
 
 // Book.findOne({"_id":"56e1b46ef4fc9bf40ff069e9"}, function(err,book){
 // 		book.remove(function(err){
@@ -65,19 +71,13 @@ newBook.save(function(err) {
 
 // 	});
 
-
-
-//databasse connect
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/data/db/');
-
-// Log to console any errors or a successful connection.
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-	console.log("Connected to db at /data/db/")
+newBook.save(function(err) {
+    if (err) {
+        console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
+    } else {
+        console.log('Book created!');
+    }
 });
-
 
 //start Express on port 8080
 app.listen(80, function(){
