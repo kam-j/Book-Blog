@@ -16,38 +16,38 @@ var review_route = require('./routes/review_routes.js')
 app.use('/api/books', book_route);
 app.use('/api/reviews', review_route);
 
-// var newBook = Book(
-// 	{
-// 		book_title: "Console Wars: Sega, Nintendo, and the Battle that Defined a Generation",
-// 		image: "http://cdn.gamer-network.net/2014/usgamer/original.jpg",
-// 		reviews_title: "Story of my life.",
-// 		reviews_rating: 4,
-// 		review:"First things first. I am team Sega.",
-// 		reviews:[
-// 			{'review':"You suck. Team Nintendo, all the way!",
-// 			'user_name':"Roy"},
-// 			{'review': 'Meh, I might just watch the movie, then.',
-// 			'user_name':'Daryl'}
-// 			],
-// 		author: "Blake J. Harris",
-// 		genres: "Tech",
-// 		description: "In 1990, Nintendo had a virtual monopoly on the videogame industry. Sega, on the other hand, was just a faltering arcade company with big aspirations and even bigger personalities. But all that would change with the arrival of Tom Kalinske, a former Mattel executive who knew nothing about videogames and everything about fighting uphill battles. His unconventional tactics, combined with the blood, sweat, and bold ideas of his renegade employees, completely transformed Sega and led to a ruthless, David-and-Goliath showdown with Nintendo. Little did he realize that Sega's success would create many new enemies and, most important, make Nintendo stronger than ever.",
-// 		pages: 320,  
-// 		publisher: "Dey Street Books",
-// 		pubdate: 2014,
+var newBook = Book(
+	{
+		book_title: "Console Wars: Sega, Nintendo, and the Battle that Defined a Generation",
+		image: "http://cdn.gamer-network.net/2014/usgamer/original.jpg",
+		reviews_title: "Story of my life.",
+		reviews_rating: 4,
+		review:"First things first. I am team Sega.",
+		reviews:[
+			{'review':"You suck. Team Nintendo, all the way!",
+			'user_name':"Roy"},
+			{'review': 'Meh, I might just watch the movie, then.',
+			'user_name':'Daryl'}
+			],
+		author: "Blake J. Harris",
+		genres: "Tech",
+		description: "In 1990, Nintendo had a virtual monopoly on the videogame industry. Sega, on the other hand, was just a faltering arcade company with big aspirations and even bigger personalities. But all that would change with the arrival of Tom Kalinske, a former Mattel executive who knew nothing about videogames and everything about fighting uphill battles. His unconventional tactics, combined with the blood, sweat, and bold ideas of his renegade employees, completely transformed Sega and led to a ruthless, David-and-Goliath showdown with Nintendo. Little did he realize that Sega's success would create many new enemies and, most important, make Nintendo stronger than ever.",
+		pages: 320,  
+		publisher: "Dey Street Books",
+		pubdate: 2014,
 				
-// 	}
+	}
 
 
-// );
+);
 
-// newBook.save(function(err) {
-//     if (err) {
-//         console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
-//     } else {
-//         console.log('Book created!');
-//     }
-// });
+newBook.save(function(err) {
+    if (err) {
+        console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
+    } else {
+        console.log('Book created!');
+    }
+});
 
 // Book.findOne({"_id":"56e1b46ef4fc9bf40ff069e9"}, function(err,book){
 // 		book.remove(function(err){
