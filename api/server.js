@@ -32,23 +32,23 @@ db.once('open', function() {
 
 var newBook = Book(
 	{
-		book_title: "Outliers: The Story of Success",
-		image: "http://liveyesand.com/wp-content/uploads/2015/07/outliers.jpg",
-		reviews_title: "Nature vs. Nurture",
-		reviews_rating: 4,
-		review:"An incredibly insightful read. This is the first book I've read by Malcolm. It definitely won't be the last!",
+		book_title: "A Man Without a Country",
+		image: "https://images-na.ssl-images-amazon.com/images/I/51O6iGQSscL.jpg",
+		reviews_title: "Another Instant Classic",
+		reviews_rating: 3,
+		review:"Sardonic authors are my favourite.", 
 		reviews:[
-			{'review':"Nothing new. It's all been said before.",
-			'user_name':"George"},
-			{'review': 'These pretzels are making me thirsty.',
-			'user_name':'Kramer'}
+			{'review':"Vonnegut’s the best.",
+			'user_name':"Elaine"},
+			{'review': 'No soup for you!',
+			'user_name':'Soup Nazi'}
 			],
-		author: "Malcolm Gladwell",
-		genres: "Psychology",
-		description: "There is a story that is usually told about extremely successful people, a story that focuses on intelligence and ambition. Gladwell argues that the true story of success is very different, and that if we want to understand how some people thrive, we should spend more time looking around them-at such things as their family, their birthplace, or even their birth date. And in revealing that hidden logic, Gladwell presents a fascinating and provocative blueprint for making the most of human potential.",
-		pages: 336,  
-		publisher: "Hachette",
-		pubdate: 2008,
+		author: "Kurt Vonnegut",
+		genres: "Essays",
+		description: "In a volume that is penetrating, introspective, incisive, and laugh-out-loud funny, one of the great men of letters of this age–or any age–holds forth on life, art, sex, politics, and the state of America’s soul. From his coming of age in America, to his formative war experiences, to his life as an artist, this is Vonnegut doing what he does best: Being himself. Whimsically illustrated by the author, A Man Without a Country is intimate, tender, and brimming with the scope of Kurt Vonnegut’s passions.",
+		pages: 160,  
+		publisher: "Random House",
+		pubdate: 2007,
 				
 	}
 
