@@ -30,40 +30,39 @@ db.once('open', function() {
 	console.log("Connected to db at /data/db/")
 });
 
-// var newBook = Book(
-// 	{
-// 		book_title: "A Man Without a Country",
-// 		image: "https://images-na.ssl-images-amazon.com/images/I/51O6iGQSscL.jpg",
-// 		reviews_title: "Another Instant Classic",
-// 		reviews_rating: 3,
-// 		review:"Sardonic authors are my favourite.", 
-// 		reviews:[
-// 			{'review':"Vonnegut’s the best.",
-// 			'user_name':"Elaine"},
-// 			{'review': 'No soup for you!',
-// 			'user_name':'Soup Nazi'}
-// 			],
-// 		author: "Kurt Vonnegut",
-// 		genres: "Essays",
-// 		description: "In a volume that is penetrating, introspective, incisive, and laugh-out-loud funny, one of the great men of letters of this age–or any age–holds forth on life, art, sex, politics, and the state of America’s soul. From his coming of age in America, to his formative war experiences, to his life as an artist, this is Vonnegut doing what he does best: Being himself. Whimsically illustrated by the author, A Man Without a Country is intimate, tender, and brimming with the scope of Kurt Vonnegut’s passions.",
-// 		pages: 160,  
-// 		publisher: "Random House",
-// 		pubdate: 2007,
+var newBook = Book(
+	{
+		book_title: "Wave",
+		image: "http://i.gr-assets.com/images/S/photo.goodreads.com/books/1352422861i/15799387._UY200_.jpg",
+		reviews_title: "Unbelievably Tragic",
+		reviews_rating: 5,
+		review: "This memoir is an extremely raw and unflinching account of the events experienced during and after the 2004 Boxing Day Tsunami by survivor, Sonali Deraniyagala. In this horrific natural disaster, Deraniyagala lost both her parents, husband and two young children in a matter of minutes. Do not expect to find an in-depth narrative of the tsunami itself, or a gutsy survivor's tale of redemption and closure. There is none of that in this book. In writing this memoir, it seems Deraniyagala is still trying to heal herself by keeping her memories alive through its' pages.", 
+		reviews:[
+			{'review':"I can't imagine what she's been through.",
+			'user_name':"Christine"},
+			{'review': "So emotional.",
+			'user_name':"Val"}
+			],
+		author: "Sonali Deraniyagala",
+		genres: "Memoir",
+		description: "A brave, intimate, beautifully crafted memoir by a survivor of the tsunami that struck the Sri Lankan coast in 2004 and took her entire family.",
+		pages: 256, 
+		publisher: "McClelland & Stewart",
+		pubdate: 2013,
 				
-// 	}
+	}
 
+);
 
-// );
+newBook.save(function(err) {
+    if (err) {
+        console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
+    } else {
+        console.log('Book created!');
+    }
+});
 
-// newBook.save(function(err) {
-//     if (err) {
-//         console.log('ERROR FROM TRYING TO SAVE BOOK: \n'+err)
-//     } else {
-//         console.log('Book created!');
-//     }
-// });
-
-// Book.findOne({"_id":"56eb2ee866c9a5e30735f42a"}, function(err,book){
+// Book.findOne({"_id":"57032f843beaae550563d002"}, function(err,book){
 // 		book.remove(function(err){
 // 			if(err){
 // 				// console.log(err);
