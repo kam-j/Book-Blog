@@ -19,7 +19,7 @@ app.use('/api/reviews', review_route);
 
 
 
-//databasse connect
+//database connect
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/data/db/');
 
@@ -32,23 +32,23 @@ db.once('open', function() {
 
 var newBook = Book(
 	{
-		book_title: "Wave",
-		image: "http://i.gr-assets.com/images/S/photo.goodreads.com/books/1352422861i/15799387._UY200_.jpg",
-		reviews_title: "Unbelievably Tragic",
+		book_title: "The Hero's Walk",
+		image: "https://images-na.ssl-images-amazon.com/images/I/51-f%2B2MWq4L._SX322_BO1,204,203,200_.jpg",
+		reviews_title: "Like Being in a Vacuum",
 		reviews_rating: 5,
-		review: "This memoir is an extremely raw and unflinching account of the events experienced during and after the 2004 Boxing Day Tsunami by survivor, Sonali Deraniyagala. In this horrific natural disaster, Deraniyagala lost both her parents, husband and two young children in a matter of minutes. Do not expect to find an in-depth narrative of the tsunami itself, or a gutsy survivor's tale of redemption and closure. There is none of that in this book. In writing this memoir, it seems Deraniyagala is still trying to heal herself by keeping her memories alive through its' pages.", 
+		review: "It's been years since I read The Hero's Walk yet it has stuck with me. I can't wait to re-read it!", 
 		reviews:[
-			{'review':"I can't imagine what she's been through.",
-			'user_name':"Christine"},
-			{'review': "So emotional.",
-			'user_name':"Val"}
+			{'review':"So sad. Could not put it down.",
+			'user_name':"Lindsey"},
+			{'review': "So powerful.",
+			'user_name':"Maureen"}
 			],
-		author: "Sonali Deraniyagala",
-		genres: "Memoir",
-		description: "A brave, intimate, beautifully crafted memoir by a survivor of the tsunami that struck the Sri Lankan coast in 2004 and took her entire family.",
-		pages: 256, 
-		publisher: "McClelland & Stewart",
-		pubdate: 2013,
+		author: "Anita Rau Badami",
+		genres: "Literary Fiction",
+		description: "Set in the dusty seaside town of Toturpuram on the Bay of Bengal, The Hero's Walk traces the terrain of family and forgiveness through the lives of an exuberant cast of characters bewildered by the rapid pace of change in today's India. Each member of the Rao family pits his or her chance at personal fulfillment against the conventions of a crumbling caste and class system.",
+		pages: 368, 
+		publisher: "Vintage Canada",
+		pubdate: 2000,
 				
 	}
 
@@ -62,7 +62,7 @@ newBook.save(function(err) {
     }
 });
 
-// Book.findOne({"_id":"57032f843beaae550563d002"}, function(err,book){
+// Book.findOne({"_id":"570335f62768cc67054ca264"}, function(err,book){
 // 		book.remove(function(err){
 // 			if(err){
 // 				// console.log(err);

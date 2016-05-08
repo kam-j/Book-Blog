@@ -33,6 +33,9 @@ router.get('/:bookId', function(req,res){
 	})
 });
 
+module.exports = router;
+
+
 //  //delete a book
 // router.delete('/:bookId',function(req,res){
 // 	console.log('Deleting Book with ID: ' +req.params.bookId);
@@ -51,9 +54,6 @@ router.get('/:bookId', function(req,res){
 
 // 	});
 // });	
-
-module.exports = router;
-
 
 
 

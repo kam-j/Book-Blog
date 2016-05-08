@@ -235,7 +235,8 @@ padding-left: 5px;
 width: 450px;
 height: 100px;
 }
-#commentSubmit{
+
+#commentSubmit {
 margin-left: 20px;
 width: 150px;
 height: 50px;
@@ -247,6 +248,7 @@ margin-bottom: 20px;
 padding-left: 10px;
 border-radius: 5px;
 }
+
 #commentSubmit:hover {
 background-color: #09466f;
 
@@ -272,8 +274,12 @@ form.form-group.align.ng-pristine.ng-valid{
 img.media-object.book-image{
 	margin-top: 15px;
 	margin-bottom: 15px; 
+	cursor: pointer;
 	/*margin-right-left: 15px;
 	margin-left: 15px;*/
+}
+img.media-object.book-image:hover{
+	background-color: #eee;
 }
 
 .button{
@@ -317,4 +323,6 @@ button {
 	font-family: 'Andale Mono';
 	color: #2c95dc;
 }
+
+
 	

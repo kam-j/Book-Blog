@@ -7,4 +7,4 @@ Install dependencies, from root run:
 	npm install
 
 To start server from root folder with:
-node api/server.js	
+node api/ server.js	
